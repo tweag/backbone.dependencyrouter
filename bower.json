@@ -1,0 +1,11 @@
+{
+  "name": "backbonedependencyrouter",
+  "version": "0.0",
+  "description": "Backbone Dependency Router",
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "devDependencies": {
+    "jasmine-jquery": "~1.5.93"
+  }
+}

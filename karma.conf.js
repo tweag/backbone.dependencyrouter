@@ -8,7 +8,7 @@ module.exports = function (config) {
 
 
     // frameworks to use
-    frameworks: ['jasmine'],
+    frameworks: ['mocha'],
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -18,23 +18,20 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       // include dependencies
-      'bower_components/jquery/jquery.js',
-      'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+      'app/bower_components/jquery/dist/jquery.js',
+      'app/bower_components/underscore/underscore.js',
+      'app/bower_components/backbone/backbone.js',
+      'app/bower_components/backbone.marionette/lib/backbone.marionette.js',
+      'app/bower_components/chai/chai.js',
+      'app/bower_components/sinon/lib/sinon.js',
 
       // include our JavaScript files
-      'scripts/example.js',
+      'src/backbone.dependencyrouter.coffee',
 
       // simple patterns to load the needed testfiles
       // equals to {pattern: 'test/*-test.js', watched: true, served: true, included: true}
-      'test/*-test.js',
+      'test/*-test.coffee',
 
-      // fixtures should be served by the webserver but not included on
-      // the page with <script> tags
-      {
-        pattern: 'test/fixtures/example.html',
-        included: false,
-        served: true
-      }
     ],
 
 
@@ -42,18 +39,6 @@ module.exports = function (config) {
     exclude: [
 
     ],
-
-    preprocessors: {
-      // disable html2js preprocessor so we can use
-      // jasmine-jquery fixture loader instead
-      // https://github.com/karma-runner/karma/issues/788
-      '**/*.html': [],
-      // source files, that you wanna generate coverage for
-      // do not include tests or libraries
-      // (these files will be instrumented by Istanbul)
-      'scripts/**/*.js': ['coverage']
-    },
-
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
@@ -81,11 +66,9 @@ module.exports = function (config) {
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
-
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
-
 
     // Start these browsers, currently available:
     // - Chrome
@@ -95,15 +78,13 @@ module.exports = function (config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome'],
-
+    browsers: ['PhantomJS'],
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
 
-
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: true
   });
 };

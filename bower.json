@@ -3,9 +3,14 @@
   "version": "0.0",
   "description": "Backbone Dependency Router",
   "dependencies": {
-    "jquery": "latest"
+    "jquery":              "latest",
+    "underscore":          "latest",
+    "backbone":            "latest",
+    "backbone.marionette": "latest"
   },
   "devDependencies": {
-    "jasmine-jquery": "~1.5.93"
+    "mocha": "latest",
+    "sinon": "latest",
+    "chai": "latest"
   }
 }

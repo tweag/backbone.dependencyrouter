@@ -40,9 +40,9 @@ module.exports =  (grunt) ->
      coffee:
         dist:
           files: [
-            expand: true
+            expand: false
             src: distDir
-            dest: '.tmp'
+            dest: 'dist/'
             ext: '.js'
           ]
         test:

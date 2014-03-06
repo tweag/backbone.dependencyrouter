@@ -1,11 +1,19 @@
 {
-  "name": "backbonedependencyrouter",
-  "version": "0.0",
-  "description": "Backbone Dependency Router",
+  "name": "backbone.dependencyrouter",
+  "version": "0.8.0",
+  "description" : "Handle State and Dependencies in a Client Side Router",
+  "main"        : "./dist/backbone.dependencyrouter.js",
+
+  "keywords"     : [
+    "backbone",
+    "router",
+    "marionette"
+  ],
+
   "dependencies": {
-    "jquery":              "latest",
-    "underscore":          "latest",
-    "backbone":            "latest",
+    "jquery":               "latest",
+    "underscore":           "latest",
+    "backbone":             "latest",
     "backbone.marionette":  "latest",
     "backbone.routefilter": "latest"
   },

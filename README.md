@@ -13,7 +13,7 @@ As routes are nested deeper, managing this dependency tree can get increasingly 
 
 # Defining Dependencies
 
-DependencyRouter manages this heirarchy for you.
+DependencyRouter manages this hierarchy for you.
 
     class BlogRouter extends Backbone.Marionette.DependencyRouter
       appRoutes:
@@ -42,15 +42,15 @@ And when navigating to */posts/1/comments/4* the only action that will be run is
 
 # Configuration
 
-You must tell Backbone.Dependency Router where it can find an instance of Backbone.Wreqr.
+You must tell Backbone.Marionette.DependencyRouter where it can find an instance of Backbone.Wreqr.
 
 If using Marionette (and Marionette's Module System)
 
-    Backbone.DependencyRouter.prototype.vent = App.vent
+    Backbone.Marionette.DependencyRouter.prototype.vent = App.vent
 
 otherwise:
 
-    Backbone.DependencyRouter.prototype.vent = App.vent
+    Backbone.Marionette.DependencyRouter.prototype.vent = App.vent
 
 
 ### Dependencies

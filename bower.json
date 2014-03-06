@@ -18,6 +18,7 @@
     "backbone.routefilter": "latest"
   },
   "devDependencies": {
+    "coffee-script": "latest",
     "mocha": "latest",
     "sinon": "latest",
     "chai": "latest"

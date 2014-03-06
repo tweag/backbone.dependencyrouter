@@ -1,0 +1,2 @@
+before_install: npm install grunt -g
+script: grunt karma:unit

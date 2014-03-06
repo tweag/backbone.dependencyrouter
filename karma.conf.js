@@ -22,8 +22,9 @@ module.exports = function (config) {
       'app/bower_components/underscore/underscore.js',
       'app/bower_components/backbone/backbone.js',
       'app/bower_components/backbone.marionette/lib/backbone.marionette.js',
+      'app/bower_components/backbone.routefilter/dist/backbone.routefilter.js',
       'app/bower_components/chai/chai.js',
-      'app/bower_components/sinon/lib/sinon.js',
+      'test/sinon.js',
 
       // include our JavaScript files
       'src/backbone.dependencyrouter.coffee',

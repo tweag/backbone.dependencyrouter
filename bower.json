@@ -6,7 +6,8 @@
     "jquery":              "latest",
     "underscore":          "latest",
     "backbone":            "latest",
-    "backbone.marionette": "latest"
+    "backbone.marionette":  "latest",
+    "backbone.routefilter": "latest"
   },
   "devDependencies": {
     "mocha": "latest",

@@ -27,7 +27,9 @@
     "test": "test"
   },
   "dependencies": {
-    "jquery": "latest"
+    "jquery": "latest",
+    "backbone" : "latest",
+    "backbone.marionette" : "latest"
   },
   "devDependencies": {
     "karma-coverage": "~0.1.3",

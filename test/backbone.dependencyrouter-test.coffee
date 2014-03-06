@@ -109,3 +109,12 @@ describe "Backbone.Marionette.DependencyRouter", ->
     visit "vms"
     visit "vms/123"
     expect(@indexSpy.calledOnce).to.equal true
+
+describe "Backbone.Marionette.DependencyRouter", ->
+  it "throws an exception if you don't assign .vent", ->
+    Backbone.Marionette.DependencyRouter::vent = undefined
+
+    createNewRouter = ->
+      class Foo extends Backbone.Marionette.DependencyRouter
+      new Foo
+    expect(createNewRouter).to.throw(/assign .vent/)

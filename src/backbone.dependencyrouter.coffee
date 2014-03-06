@@ -1,6 +1,9 @@
 class Backbone.Marionette.DependencyRouter extends Backbone.Marionette.AppRouter
   constructor: ->
-    throw "Backbone RouteFilter required" unless _.isFunction(@before)
+    unless _.isFunction(@before)
+      throw "Backbone RouteFilter required"
+    if _.isUndefined(@vent)
+      throw "Must assign .vent to an instance of Backbone.Wreqr"
     super
     @cid = _.uniqueId()
     @_initResolvedActions()
